@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    
+
+
+  <p>Beste</p>
+
+  <? if (type == "accepted") { ?>
+
+    <p>Je ticketreservering voor de voorstelling "<?= show ?>" is succesvol ontvangen!</p>
+
+    <p>Aantal tickets: <b><?= tickets ?></b><br>
+    Datum en tijd: <b><?= show ?></b></p>
+
+  <? } ?>
+
+  <? if (type == "rejected") { ?>
+
+  <p>Helaas zijn er niet genoeg tickets beschikbaar voor de voorstelling "<?= show ?>". 
+  
+    <? if (availableTickets == 1) { ?>
+      Er is momenteel slechts <?= availableTickets ?> ticket beschikbaar.</p>
+    <? } else {?>
+      Er zijn momenteel slechts <?= availableTickets ?> tickets beschikbaar.</p>
+    <? } ?>
+  <? } ?>
+
+  <p>Met vriendelijke groeten<br>
+  Het Nocturne-team</p>
+
+
+
+
+  </body>
+</html>
